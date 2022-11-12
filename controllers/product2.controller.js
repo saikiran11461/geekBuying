@@ -46,18 +46,20 @@ router.get("/:id",authentication, authorization, async(req,res)=>{
 })
 
 
-// router.get("/",async(req,res)=>{
+router.get("/",async(req,res)=>{
 
-//     try{
+    try{
      
-//         const product=await Product.find().lean().exec()
+        const product=await Product.find().lean().exec()
       
-//         return res.send(product)
+        return res.send(product)
         
-//     }catch(err){
-//         return res.status(500).send(err.message)
-//     }
-// })
+    }catch(err){
+        return res.status(500).send(err.message)
+    }
+})
+
+
 router.get("/",authentication, authorization, async(req,res)=>{
 
             const {page,limit} = req.query
