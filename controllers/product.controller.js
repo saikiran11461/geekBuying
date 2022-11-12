@@ -57,7 +57,7 @@ router.get("/:id",authentication, authorization, async(req,res)=>{
 //     }
 // })
 
-router.get("/",authentication, authorization, async(req,res)=>{
+router.get("/", async(req,res)=>{
         console.log(req.url)
             const {page,limit} = req.query
             console.log( 'page', page)
