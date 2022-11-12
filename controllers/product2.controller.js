@@ -31,7 +31,7 @@ router.post("/addtocart",authentication, authorization, async(req,res)=>{
     //     return res.status(500).send(err.message)
     // }
 })
-router.get("/:id",authentication, authorization, async(req,res)=>{
+router.get("/:id", async(req,res)=>{
     // console.log('product id')
     try{
         console.log(req.params)
