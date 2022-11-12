@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const productSchema = new mongoose.Schema(
   {
    
-    items_img_href: { type: String, required: true },
+   
     lazy_img_src: { type: String, required: true },
     items_p: { type: String, required: true },
     items_price: { type: String, required: true },

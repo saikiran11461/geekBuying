@@ -96,7 +96,19 @@ app.get('/cartdata',authentication,authorization, async (req,res)=>{
 })
 
 
+app.delete('/', async (req,res) => { 
 
+  try {
+    await UserModel.updateMany({}, { $unset : { items_img_href : 1} })
+    res.send("delete")
+    
+  } catch (error) {
+    console.log(error)
+  }
+
+
+
+})
 
 
 app.listen(process.env.PORT, async () => {
@@ -107,3 +119,5 @@ app.listen(process.env.PORT, async () => {
     console.log("Error Connecting DB..");
   }
 });
+
+
